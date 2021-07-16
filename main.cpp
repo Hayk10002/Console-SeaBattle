@@ -16,15 +16,6 @@
 #include "Bullet.hpp"
 using namespace std;
 
-//#define FASTSTART
-
-
-
-
-
-
-
-
 
 int main()
 {
@@ -57,9 +48,6 @@ int main()
 			if(gch == 27) gameclosed = 1;
 			else if(gch == 13)
 			{
-#ifdef FASTSTART
-				endofinit = 1;
-#else// 
 				set<int> falseposshipsind{};
 				for(int i = 0; i < 10; i++) 
 				{
@@ -87,7 +75,6 @@ int main()
 					Sleep(200);
 					for(auto iter = falseposshipsind.begin(); iter != falseposshipsind.end(); iter++) if((*iter) != pl.controllingshipind) pl.ships[*iter].isfalsepos = 0;
 				}
-#endif
 			}
 			else
 			{

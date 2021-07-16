@@ -43,7 +43,7 @@ void Player::control(char gch)
 		controllingshipind %= 10;
 		ships[controllingshipind].iscontrolling = 1;
 	}
-	else if (gch == '`')
+	else if (gch == 'q' || gch == 'Q')
 	{
 		ships[controllingshipind].iscontrolling = 0;
 		ships[controllingshipind].isfalsepos = 0;
